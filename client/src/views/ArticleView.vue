@@ -1,5 +1,5 @@
 <template>
- <div class="card">
+ <div class="card" >
    <h3>Title</h3>
    <span>
      <img src="https://picsum.photos/150/150">
@@ -14,18 +14,25 @@
      Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Duis aute
      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
      pariatur. Mauris tincidunt sem sed arcu. Duis bibendum, lectus ut viverra rhoncus,
-     dolor nunc faucibus libero, eget facilisis enim ipsum id lacus.
+     dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Lorem ipsum dolor
+     sit amet, consectetuer adipiscing elit. Aenean fermentum risus id tortor. Curabitur
+     vitae diam non enim vestibulum interdum. Nullam sit amet magna in magna gravida vehicula.
+
    </span>
 
  </div>
+
+
 </template>
 
-<script>
-export default {
-  name: "Article"
+
+
+<style>
+@media (min-width: 1024px) {
+  .article {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
 }
-</script>
-
-<style scoped>
-
 </style>

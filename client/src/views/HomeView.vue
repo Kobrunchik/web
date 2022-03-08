@@ -1,11 +1,19 @@
 <script>
 import TheWelcome from '@/components/TheWelcome.vue'
-import Article from '@/components/Article.vue';
+//import Article from '@/components/ArticleView.vue';
+import Cards from '@/components/Cards.vue'
+
+//export default {
+
+
 
 export default {
   components:{
-    Article
+    Cards
+    //Navbar
   },
+
+
 
   data() {
     return{
@@ -23,9 +31,8 @@ export default {
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-    <button type="button" @click="onClick"> Count: {{count}}</button>
-    <Article/>
-  </main>
+
+
+  <Cards/>
+
 </template>
