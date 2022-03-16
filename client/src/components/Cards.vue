@@ -16,9 +16,9 @@
       <div class="card" style="width: 20rem;">
         <img src="https://picsum.photos/500/500" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Forms</h5>
           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="/articl" class="btn btn-primary">Go to Article</a>
+          <a href="/form" class="btn btn-primary">Go to Article</a>
         </div>
       </div>
     </div>
