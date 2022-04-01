@@ -45,8 +45,12 @@ Pellentesque arcu. Phasellus rhoncus.
         },
       ]
     }
+  },
+  async created(){
+    const res =await fetch('http://localhost:3000/articles', {method: 'GET'});
+    console.log(res);
+    this.articles = await res.json();
   }
-
 }
 
 </script>
