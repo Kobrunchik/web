@@ -1,14 +1,36 @@
 var express = require('express');
 var router = express.Router();
 var debug = require('debug')('router:articles')
+import ArticleController from "../controller/ArticleController";
+const controller = new ArticleController();
 
+router.get("/", function (req, res, next) {
+    const articles = controller.getAll();
+    res.send(articles);
+});
+router.get('/:id', (req, res, next) => {
+    const id = req.params.id
+    try{
+        const article = controller.getOne(id);
+        res.send(article);
+    }catch (e){
+
+    }
+});
+
+
+
+
+/*
 const options = {
     verbose: console.debug
 };
 const db = require('better-sqlite3')('article.sqlite', options);
 
+ */
 
 
+/*
 let articles =[
     {
         id: 1,
@@ -34,11 +56,14 @@ let articles =[
 `
     },
 ];
+
 router.get('/', function(req, res, next) {
     const row = db.prepare('SELECT * FROM article').all();
     console.log(row);
     res.send(row);
 });
+
+ */
 /*router.get('/:id', function(req, res, next){
     const id = req.params.id
     console.debug (req.params);
@@ -49,6 +74,7 @@ router.get('/', function(req, res, next) {
         res.send('Not Found');
     }
 });*/
+/*
 router.get('/:id', function(req, res, next){
     const id1 = req.params.id
     const row = db.prepare('SELECT * FROM article WHERE id =?').get(id1);
@@ -75,7 +101,7 @@ router.get('/:id', function(req, res, next){
     res.send(article);
 
 });*/
-
+/*
 router.post("/", function(req, res, next){
     const body = req.body;
 
@@ -92,6 +118,8 @@ router.post("/", function(req, res, next){
     res.send(article);
 
 });
+
+
 
 /*router.patch("/:id", function(req, res, next){
 
@@ -112,6 +140,7 @@ router.post("/", function(req, res, next){
     }
 });*/
 
+/*
 router.patch("/:id", function(req, res, next){
 
     const body = req.body;
@@ -144,7 +173,7 @@ router.patch("/:id", function(req, res, next){
         res.sendStatus(404);
     }
 });*/
-
+/*
 router.delete("/:id", function(req, res, next){
 
     const id = req.params.id;
@@ -156,5 +185,7 @@ router.delete("/:id", function(req, res, next){
         res.sendStatus(404);
     }
 });
+
+ */
 
 module.exports = router;
